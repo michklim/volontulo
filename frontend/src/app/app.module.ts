@@ -16,12 +16,16 @@ import { HeaderComponent } from './header/header.component';
 import { CookieLawBannerComponent } from './cookie-law-banner/cookie-law-banner.component';
 import { AboutUsComponent } from './static/about-us.component';
 import { FaqVolunteersComponent } from './static/faq-volunteers.component';
+imports: [ RouterTestingModule ]
+let href = fixture.debugElement.query(By.css('a')).nativeElement
+    .getAttribute('href');
+expect(href).toEqual('/settings/testing/edit/1'); // change file location
 
 const appRoutes: Routes = [
-  //{
+  // {
   //   path: '',
   //   component: HomeComponent
-  //},
+  // },
   {
     path: 'o-nas',
     component: AboutUsComponent
